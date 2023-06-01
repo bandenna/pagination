@@ -13,6 +13,20 @@
   margin-top: 20px;
 }
 
+.active {
+  border-radius: 4px;
+  height: 40px;
+  width: 40px;
+  border: 2px grey solid;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: black;
+}
+
 .pg-btn {
   border-radius: 4px;
   height: 40px;
@@ -49,4 +63,16 @@
   color: black;
   font-family: "Roboto";
   font-weight: 500;
+}
+
+.for-icons {
+  border-radius: 100%;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  height: 40px;
+  width: 40px;
+  margin: 20px;
 }

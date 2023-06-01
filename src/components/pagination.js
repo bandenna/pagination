@@ -5,16 +5,17 @@ import Numbers from './numbers'
 const Pagination = () => {
     const [data, setData] = useState('')
     const [partialData, setPartial] = useState('')
-
     const getData = async () => {
         const response = await fetch("https://jsonplaceholder.typicode.com/posts")
         const rData = await response.json()
         setData(rData)
-        setPartial(rData.slice(0, 10))
+        setPartial(rData.slice(0, 5))
     }
     const getPages = (pageNum) => {
-        setPartial(data.slice((pageNum * 10) - 10, pageNum * 10))
+        setPartial(data.slice((pageNum * 5) - 5, pageNum * 5))
     }
+
+
 
     useEffect(() => {
         getData()
@@ -32,8 +33,12 @@ const Pagination = () => {
                     return <Detailcard details={each} key={each.id} />
                 })}
 
+
             </div>
+
         </div>
+
     )
 }
 export default Pagination
+
